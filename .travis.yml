@@ -11,7 +11,7 @@ before_deploy:
 
 deploy:
   provider: script
-  script: rvm $TRAVIS_RUBY_VERSION do scripts/deploy.sh
+  script: rvm 2.3.0 do scripts/deploy.sh
   skip_cleanup: true
   on:
     branch: master
