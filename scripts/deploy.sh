@@ -1,2 +1,1 @@
-#!/bin/bash
-fir --help
+fir version
