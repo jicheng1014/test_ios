@@ -10,14 +10,7 @@ before_deploy:
 - fir --version
 
 deploy:
-  - provider: script
-    script: fir --version
-    skip_cleanup: true
-    on:
-      tags: true
-      branch: develop
-  - provider: script
-    script: fir --version
-    skip_cleanup: true
-    on:
-      branch: master
+  provider: script
+  script: scripts/deploy.sh
+  on:
+    branch: master
