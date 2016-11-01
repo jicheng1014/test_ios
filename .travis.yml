@@ -1,0 +1,22 @@
+language: objective-c
+
+before_script:
+
+script:
+
+before_deploy:
+- rvm use 2.3.0
+- gem install fir-cli
+
+deploy:
+  - provider: script
+    script: fir --version
+    skip_cleanup: true
+    on:
+      tags: true
+      branch: develop
+  - provider: script
+    script: fir --version
+    skip_cleanup: true
+    on:
+      branch: master
